@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link nav-first" href="#">管理者/シフト希望を募集 (新規)</a>
+                <a class="nav-link nav-first" href="#"><span style="color: #625F5A">管理者/シフト希望を募集 (新規)</span></a>
             </li>
             <!--<li class="nav-item">-->
                 <!--<a class="nav-link" href="#">Link</a>-->
@@ -73,9 +73,82 @@
         </ul>
     </div>
 </nav>
-<div class="sidebar">
-    <div class="avatar">
 
+<div class="container-fluid">
+    <div class="col-md-3">
+    <div class="row">
+        <div class="avatar">
+            <img src="images/avt.png" alt="Avatar" title="Avatar">
+            <div class="description">
+                <span class="text-name">名前 <br>
+                    サブ表示</span>
+            </div>
+        </div>
+
+        <div class="input-group search">
+            <input class="form-control py-2 border-right-0 border" type="search" placeholder="検索" id="example-search-input">
+                <span class="input-group-append">
+                <button class="btn btn-outline-secondary border-left-0 border" type="button">
+                    <i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+        <br>
+        <div class="nav-side-menu">
+            <div class="menu-list">
+                <ul id="menu-content" class="menu-content">
+                    <li data-toggle="collapse" data-target="#item1" class="collapsed active">
+                        <a href="#"><i class="fa fa-calendar fa-lg"></i> スケジュール <span class="arrow"></span></a>
+                    </li>
+
+                    <li data-toggle="collapse" data-target="#item2" class="collapsed active">
+                        <a href="#"><i class="fa fa-building fa-lg" aria-hidden="true"></i> 取引先 <span class="arrow"></span></a>
+                    </li>
+                    <ul class="sub-menu collapse" id="item2">
+                        <li><a href="#">面会一覧</a></li>
+                        <li><a href="#">取引業者を探す</a></li>
+                        <li class="item-icon"><a href="#"><i class="fa fa-shield" aria-hidden="true"></i>面会状況</a></li>
+                        <li class="item-icon"><a href="#"><i class="fa fa-shield" aria-hidden="true"></i>取引業者への一斉連絡</a></li>
+                        <li class="item-icon blur"><a href="#"><i class="fa fa-shield" aria-hidden="true"></i>企業からのお知らせ</a></li>
+                        <li class="item-icon blur"><a href="#"><i class="fa fa-shield" aria-hidden="true"></i>製品情報</a></li>
+                    </ul>
+                    <li data-toggle="collapse" data-target="#item3" class="collapsed active item-border">
+                        <a href="#"><i class="fa fa-building-o fa-lg" aria-hidden="true"></i>
+                            取引先メッセージ
+                            <span class="arrow"></span>
+                        </a>
+                    </li>
+                    <li data-toggle="collapse" data-target="#item4" class="collapsed active collapse-border item-border">
+                        <a href="#"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i> 院内メッセージ
+                            <span class="arrow"></span>
+                            <span class="icon-add"><i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i></span>
+                            <span class="unread">未読</span></a>
+                    </li>
+                    <li data-toggle="collapse" data-target="#item4" class="collapsed active item-no-border ">
+                        <a href="#"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+                            院外メッセージ
+                            <span class="arrow"></span>
+                            <span class="icon-add"><i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i></span>
+                        </a>
+
+                    </li>
+                    <li data-toggle="collapse" data-target="#item4" class="collapsed active item-border">
+                        <a href="#"><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i> 院内グループ
+                            <span class="arrow"></span>
+                            <span class="icon-add"><i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i></span>
+                            <span class="unread">未読</span></a>
+                    </li>
+                    <li data-toggle="collapse" data-target="#item4" class="collapsed active item-no-border" >
+                        <a href="#"><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>
+                            院外グループ
+                            <span class="arrow"></span>
+                            <span class="icon-add"><i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
