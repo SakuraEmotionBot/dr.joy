@@ -201,6 +201,7 @@
     position: fixed;
     width: 320px;
     height: 100%;
+
 }
 .nav-side-menu .item-border{
     border-bottom: 1px solid #7070708f;
@@ -226,7 +227,13 @@
     vertical-align: middle;
     margin-right: 10px;
 }
+.menu-list{
+    margin-top: -15px;
+    max-height: 25em;
+    overflow-y: auto;
+}
 .right-content{
+
     height: 50px;
     /*width: 903px;*/
     margin: 75px 10px 10px -20px;
