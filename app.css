@@ -3,6 +3,9 @@
     background-color: #F18D00;
     height: 50px;
     font-size: 16px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
 }
 .main-nav i{
     color: #fff;
@@ -21,8 +24,11 @@
     padding-top: 4px;
 }
 /*.nav-item i{*/
-    /*color: #fff;*/
+/*color: #fff;*/
 /*}*/
+.navbar-nav .dropdown-item{
+    color: #000;
+}
 .nav-item .nav-text{
     color: #fff;
     vertical-align: bottom;
@@ -44,15 +50,15 @@
 }
 
 /*.sidebar{*/
-    /*height: 100%;*/
-    /*width: 160px;*/
-    /*position: fixed;*/
-    /*z-index: 1;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*background-color: #fff;*/
-    /*overflow-x: hidden;*/
-    /*padding-top: 20px;*/
+/*height: 100%;*/
+/*width: 160px;*/
+/*position: fixed;*/
+/*z-index: 1;*/
+/*top: 0;*/
+/*left: 0;*/
+/*background-color: #fff;*/
+/*overflow-x: hidden;*/
+/*padding-top: 20px;*/
 /*}*/
 .row{
     padding-left: 10px;
@@ -81,7 +87,7 @@
     width: 100%;
 }
 /*.dropdown-toggle:after {*/
-    /*border: none;*/
+/*border: none;*/
 /*}*/
 .menu-content{
     width: 310px;
@@ -188,7 +194,14 @@
 .sub-menu .blur i{
     opacity: 0.3;
 }
-
+.nav-side-menu{
+    margin-top: 50px;
+    /*overflow: auto;*/
+    font-weight: 200;
+    position: fixed;
+    width: 320px;
+    height: 100%;
+}
 .nav-side-menu .item-border{
     border-bottom: 1px solid #7070708f;
 }
@@ -204,7 +217,7 @@
     height: 25px;
     border-radius: 5px;
     color: #fff;
-    font-size: 11.7px;
+    font-size: 0.73125rem;
     /*text-align: center;*/
     vertical-align: top;
 }
@@ -212,4 +225,57 @@
     float: right;
     vertical-align: middle;
     margin-right: 10px;
+}
+.right-content{
+    height: 50px;
+    /*width: 903px;*/
+    margin: 75px 10px 10px -20px;
+    font-size: 0.75rem;
+    color: #777777;
+}
+.back{
+    margin-bottom: 40px;
+}
+.back-icon{
+    background-color: #EEEEEE;
+    padding:15px 15px 10px 15px;
+}
+.back-icon i{
+    color: #3D7FB7;
+    font-size: 1.265625rem;
+    cursor: pointer;
+}
+.back-text{
+    font-size: 1.3125rem;
+    text-align: center;
+    padding-left: 350px;
+}
+.span-time{
+    font-size: 0.75rem;
+}
+.input-date{
+    display: inline;
+    width: 90px;
+    height: 32px;
+    margin:0px 5px ;
+    font-size: 0.75rem;
+}
+.small{
+    display: inline;
+    width: 55px;
+    height: 32px;
+    font-size: 0.75rem;
+}
+
+
+.form-group input:checked ~ .color-checkbox:after {
+    background-color: #F18D00;
+    border-radius:0.125rem ;
+}
+.btn-custom{
+    background-color: #004580;
+    width: 88px;
+    height: 32px;
+    color: #fff;
+    margin-left:460px;
 }
