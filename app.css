@@ -194,6 +194,9 @@
 .sub-menu .blur i{
     opacity: 0.3;
 }
+.blur{
+    opacity: 0.5;
+}
 .nav-side-menu{
     margin-top: 50px;
     /*overflow: auto;*/
@@ -256,9 +259,11 @@
     font-size: 1.3125rem;
     text-align: center;
     padding-left: 350px;
+    color: #000;
 }
 .span-time{
     font-size: 0.75rem;
+    /*margin-right: 5px;*/
 }
 .input-date{
     display: inline;
@@ -267,6 +272,52 @@
     margin:0px 5px ;
     font-size: 0.75rem;
 }
+.input-date.first{
+    margin: 0px 5px 0px 0px;
+
+}
+select.form-control:not([size]):not([multiple]).input-date.second{
+    height: 32px;
+    width: 120px;
+    font-size: 0.73125rem;
+    padding-left: 3px;
+}
+select.form-control:not([size]):not([multiple]).input-date.third{
+    height: 32px;
+    width: 60px;
+    margin-right: 15px;
+    font-size: 0.73125rem;
+    padding-left: 3px;
+}
+.input-date.fourth{
+    /*margin: 0px 5px 0px 0px;*/
+    width: 560px;
+}
+.input-date.fifth{
+    /*margin: 0px 5px 0px 0px;*/
+    width: 520px;
+}
+.input-date.sixth{
+    /*margin: 0px 5px 0px 0px;*/
+    width: 340px;
+}
+.input-date.seventh{
+    width: 660px;
+}
+.title-label{
+    padding-left: 350px;
+}
+.title-label.label1{
+    padding-left: 380px;
+}
+.title-label.label2 {
+    padding-left: 560px;
+}
+/*.second {*/
+    /*height: 32px;*/
+    /*width: 120px;*/
+/*}*/
+
 .small{
     display: inline;
     width: 55px;
@@ -285,4 +336,126 @@
     height: 32px;
     color: #fff;
     margin-left:460px;
+    font-size: 0.84375rem;
+    margin-bottom: 30px;
+}
+.btn-custom1{
+    background-color: #004580;
+    width: 60px;
+    height: 32px;
+    color: #fff;
+    margin-left:460px;
+    font-size: 0.84375rem;
+    margin-bottom: 30px;
+}
+
+.title{
+    font-size: 18px;
+    color: #333333;
+    margin-top: 30px;
+}
+.title.first{
+     margin-left: -7px;
+
+ }
+select {
+    /*border: 1px solid #ccc;*/
+    height: 26px;
+    line-height: 18px;
+    margin: 0;
+    padding: 3px;
+    background: transparent none no-repeat;
+    cursor: pointer;
+}
+
+@media screen and (min-width:0) {
+    /* for relatively modern browsers including IE 8+ */
+    select {
+        border-radius: 4px;
+        background-image: url("data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAaCAYAAACkVDyJAAAAlElEQVRIx+2VwQ3AIAhFwTiFi7KC7uYGHo1z0Et7MWkjaEiaQOJBDzy/wgdqrXwHWKyAiGAZDnSgHBhC+IfCUgqbKXxgGqhY4QyRQkUK35KLoK01iZd+xZKXRuEfbvdQPPGkAABEhMeLhohE5yfaAufk93791r13zQDmnLNqcOMYg1NKmoJgTRHtmDeaWZvPQweaAi8PXSmZJU3QRAAAAABJRU5ErkJggg==");
+        background-position: -50px -50px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    /* for Webkit */
+    select {
+        -webkit-appearance: none;
+        background-position: right center;
+        padding: 3px 32px 3px 5px;
+    }
+}
+
+@-moz-document url-prefix() {
+    /* for Firefox */
+    select {
+        display: flex;
+        border: 0;
+        box-shadow: inset 0 0 1px #000;
+        padding: 0;
+        background-position: right center;
+        padding-right: 16px;
+        color: transparent;
+        /* this shifts the text down a few pixels and removes the focus-ring */
+        text-shadow: 0 4px 0 #000;
+        text-indent: 2px;
+    }
+    select * {
+        color: black;
+        text-shadow: none;
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* for IE10+ */
+    select::-ms-expand {
+        display: none;
+    }
+    select {
+        background-position: right center;
+        padding-right: 30px;
+    }
+}
+
+.p-content{
+    color: #333333;
+    font-size: 0.75rem;
+}
+.icon-remove i{
+    font-size: 1.75rem;
+    color: #3D7FB7;
+    cursor: pointer;
+    vertical-align: top;
+}
+.square {
+    width: 20px;
+    height: 20px;
+    background-color: #FFEBFB;
+    border: 1px solid #D7D7D7;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+.square1{
+    background-color: #FFCD97;
+}
+.square2{
+    background-color: #E7EFD8;
+}
+.square3{
+    background-color: #E4CFF9;
+}
+.square4{
+    background-color: #FFF6A4;
+}
+.square5{
+    background-color: #FFBDC5;
+}
+.square6{
+    background-color: #DCDCDC;
+}
+.square7{
+    background-color: #fff;
+}
+.label-input{
+    margin: 0px 10px 0px 10px;
 }
