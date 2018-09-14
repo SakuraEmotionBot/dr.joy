@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dr.Joy</title>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"-->
+          <!--integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+    <!--<link rel="stylesheet" href="app.css">-->
+<link href="app.css" rel="stylesheet"></head>
+<body>
+<nav class="navbar navbar-expand-lg main-nav">
+    <a class="navbar-brand" href="#"><img src="images/logo1.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link nav-first" href="#"><span style="color: #625F5A">管理者/シフト希望を募集 (新規)</span></a>
+            </li>
+            <!--<li class="nav-item">-->
+            <!--<a class="nav-link" href="#">Link</a>-->
+            <!--</li>-->
+        </ul>
+        <ul class="navbar-nav nav-right">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    日本東京病院
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    メニュー
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <!--<span class="fa-stack">-->
+                <!--<i class="fa fa-square-o fa-stack-2x"></i>-->
+                <!--<i class="fa fa-stack-1x">A</i>-->
+                <!--</span>-->
+                <div class="nav-border"><span>A</span></div>
+
+            </li>
+            <li class="nav-item">
+                <div class="nav-text"><span>123,040</span></div>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link"><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link"><i class="fa fa-paper-plane-o fa-lg" aria-hidden="true"></i><span
+                        class="nav-text nav-small">15</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link"><i class="fa fa-cog fa-lg" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">ログアウト</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row">
+                <div class="nav-side-menu">
+                    <div class="avatar">
+                        <img src="images/avt.png" alt="Avatar" title="Avatar">
+                        <div class="description">
+                <span class="text-name">名前 <br>
+                    サブ表示</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group search">
+                        <input class="form-control py-2 border-right-0 border" type="search" placeholder="検索"
+                               id="example-search-input">
+                        <span class="input-group-append">
+                <button class="btn btn-outline-secondary border-left-0 border" type="button">
+                    <i class="fa fa-search"></i>
+                </button>
+              </span>
+                    </div>
+                    <br>
+                    <div class="menu-list">
+                        <ul id="menu-content" class="menu-content">
+                            <li data-toggle="collapse" data-target="#item1" class="collapsed active">
+                                <a href="#"><i class="fa fa-calendar fa-lg"></i> スケジュール <span class="arrow"></span></a>
+                            </li>
+
+                            <li data-toggle="collapse" data-target="#item2" class="collapsed active">
+                                <a href="#"><i class="fa fa-building fa-lg" aria-hidden="true"></i> 取引先 <span
+                                        class="arrow"></span></a>
+                            </li>
+                            <ul class="sub-menu collapse" id="item2">
+                                <li><a href="#">面会一覧</a></li>
+                                <li><a href="#">取引業者を探す</a></li>
+                                <li class="item-icon"><a href="#"><i class="fa fa-shield"
+                                                                     aria-hidden="true"></i>面会状況</a>
+                                </li>
+                                <li class="item-icon"><a href="#"><i class="fa fa-shield" aria-hidden="true"></i>取引業者への一斉連絡</a>
+                                </li>
+                                <li class="item-icon blur"><a href="#"><i class="fa fa-shield" aria-hidden="true"></i>企業からのお知らせ</a>
+                                </li>
+                                <li class="item-icon blur"><a href="#"><i class="fa fa-shield"
+                                                                          aria-hidden="true"></i>製品情報</a></li>
+                            </ul>
+                            <li data-toggle="collapse" data-target="#item3" class="collapsed active item-border">
+                                <a href="#"><i class="fa fa-building-o fa-lg" aria-hidden="true"></i>
+                                    取引先メッセージ
+                                    <span class="arrow"></span>
+                                </a>
+                            </li>
+                            <li data-toggle="collapse" data-target="#item4"
+                                class="collapsed active collapse-border item-border">
+                                <a href="#"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i> 院内メッセージ
+                                    <span class="arrow"></span>
+                                    <span class="icon-add"><i class="fa fa-plus-square-o fa-lg"
+                                                              aria-hidden="true"></i></span>
+                                    <span class="unread">未読</span></a>
+                            </li>
+                            <li data-toggle="collapse" data-target="#item4" class="collapsed active item-no-border ">
+                                <a href="#"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+                                    院外メッセージ
+                                    <span class="arrow"></span>
+                                    <span class="icon-add"><i class="fa fa-plus-square-o fa-lg"
+                                                              aria-hidden="true"></i></span>
+                                </a>
+
+                            </li>
+                            <li data-toggle="collapse" data-target="#item4" class="collapsed active item-border">
+                                <a href="#"><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i> 院内グループ
+                                    <span class="arrow"></span>
+                                    <span class="icon-add"><i class="fa fa-plus-square-o fa-lg"
+                                                              aria-hidden="true"></i></span>
+                                    <span class="unread">未読</span></a>
+                            </li>
+                            <li data-toggle="collapse" data-target="#item4" class="collapsed active item-no-border">
+                                <a href="#"><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>
+                                    院外グループ
+                                    <span class="arrow"></span>
+                                    <span class="icon-add"><i class="fa fa-plus-square-o fa-lg"
+                                                              aria-hidden="true"></i></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="row right-content">
+                <div class="col-md-12">
+                    <div class="back">
+                        <span class="back-icon"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                        <span class="back-text">シフト希望を募集</span>
+                        <span><i class="fa fa-cog fa-lg float-right" style="color: #A6A6A6"
+                                 aria-hidden="true"></i></span>
+                    </div>
+                    <div class="title first">「内分泌科」からの募集</div>
+                    <p class="p-content"><br>2017年6月1日(金) 〜 2017年7月31日(日)
+                        のシフト希望を募集します。2017年5月1日(金) 19:00 までに提出してください。<br><br>
+                        6月10日は監査が入りますので、担当者は出勤をお願いします。<br>
+                        6月20日は創立祭のため、やむを得ない場合以外はなるべく出勤をお願いします。<br>
+                        また、全国呼吸器内科学会へ登壇・参加される方は記載してください。 <span style="color: #3D7FB7;">... もっと読む</span><br></p>
+                    <span class="title">希望休</span>
+                    <p><br>希望日を入力してください。希望日がお休みにならない場合もございます。</p>
+                    <div class="forn-group">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-date first" value="2017/06/01">
+                            <select class="form-control input-date second ">
+                                <option>種別を選択</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                            <select class="form-control input-date third ">
+                                <option>終日</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                            <span>理由</span>
+                            <input type="text" class="form-control input-date fourth" placeholder="100文字以内">
+                            <span class="icon-remove"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            <br><span class="title-label">0/100</span>
+                        </div>
+                    </div>
+                    <div class="forn-group">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-date first" value="2017/06/01">
+                            <select class="form-control input-date second ">
+                                <option>種別を選択</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                            <select class="form-control input-date third ">
+                                <option>終日</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                            <span>理由</span>
+                            <input type="text" class="form-control input-date fourth" placeholder="100文字以内">
+                            <span class="icon-remove"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            <br><span class="title-label">0/100</span>
+                        </div>
+                    </div>
+                    <div class="forn-group">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-date first" value="2017/06/01">
+                            <select class="form-control input-date second ">
+                                <option>種別を選択</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                            <select class="form-control input-date third ">
+                                <option>終日</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                            <span>理由</span>
+                            <input type="text" class="form-control input-date fourth" placeholder="100文字以内">
+                            <span class="icon-remove"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            <br><span class="title-label">0/100</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button style="border: 0;background-color: #fff"><i class="fa fa-plus-square fa-2x" style="margin-left: -7px;color: #A6A6A6"></i><span
+                                style="color: #3D7FB7;margin-left: 10px;margin-bottom: 10px">追加</span></button>
+                    </div>
+                    <div class="title">夜勤NG</div>
+                    <p class="p-content"><br>当直に入れない日を入力してください。理由も併せてご記入ください。承認されない場合もございます。</p>
+                    <div class="forn-group">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-date first" value="2017/06/01">
+                            <select class="form-control input-date second ">
+                                <option>種別を選択</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                            <span style="padding-left: 20px">理由・その他の場合<span style="color: red">※</span></span>
+                            <input type="text" class="form-control input-date fifth" placeholder="100文字以内">
+                            <span class="icon-remove"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            <br><span class="title-label label1">0/100</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button style="border: 0;background-color: #fff"><i class="fa fa-plus-square fa-2x" style="margin-left: -7px;color: #A6A6A6"></i><span
+                                style="color: #3D7FB7;margin-left: 10px;margin-bottom: 10px">追加</span></button>
+                    </div>
+                    <div class="title">夜勤NG</div>
+                    <p class="p-content"><br>当直希望日がありましたら入力してください。希望日が当直にならない場合もございます。</p>
+                    <input type="text" class="form-control input-date first" value="2017/06/01">
+                    <span class="icon-remove"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <div class="form-group">
+                        <br>
+                        <button style="border: 0;background-color: #fff"><i class="fa fa-plus-square fa-2x" style="margin-left: -7px;color: #A6A6A6"></i><span
+                                style="color: #3D7FB7;margin-left: 10px;margin-bottom: 10px">追加</span></button>
+                    </div>
+                    <div class="title">外勤予定</div>
+                    <p class="p-content"><br>すでに決まっている外勤予定がありましたら入力してください。その他を選択した場合は、備考欄に外勤先をご記入ください。</p>
+                    <div class="form-group" >
+                        <input type="text" class="form-control input-date first" style="margin-right: 20px" value="2017/06/01">
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="defaultInline1" checked disabled>
+                            <label class="custom-control-label color-checkbox" for="defaultInline1">終日</label>
+                        </div>
+                        <!-- Default inline 2-->
+                        <div class="custom-control custom-checkbox custom-control-inline ">
+                            <input type="checkbox" class="custom-control-input" id="defaultInline2" checked disabled>
+                            <label class="custom-control-label color-checkbox blur" for="defaultInline2">午前</label>
+                        </div>
+
+                        <!-- Default inline 3-->
+                        <div class="custom-control custom-checkbox custom-control-inline ">
+                            <input type="checkbox" class="custom-control-input" id="defaultInline3" checked disabled>
+                            <label class="custom-control-label color-checkbox blur" for="defaultInline3">午後</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline ">
+                            <input type="checkbox" class="custom-control-input " id="defaultInline4" checked disabled>
+                            <label class="custom-control-label color-checkbox blur" for="defaultInline4">夜間</label>
+                        </div>
+                        <select class="form-control input-date second ">
+                            <option>外勤先を選択</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                        <span style="margin-left: 10px">理由</span>
+                        <input type="text" class="form-control input-date sixth" placeholder="100文字以内">
+                        <span class="icon-remove"><i class="fa fa-times" aria-hidden="true"></i></span>
+                        <br><span class="title-label label2">0/100</span>
+                        <div class="form-group">
+                            <br>
+                            <button style="border: 0;background-color: #fff"><i class="fa fa-plus-square fa-2x" style="margin-left: -7px;color: #A6A6A6"></i><span
+                                    style="color: #3D7FB7;margin-left: 10px;margin-bottom: 10px">追加</span></button>
+                        </div>
+                        <div class="title">その他の予定 (学会、研修等)</div>
+                        <p class="p-content"><br>すでに決まっている学会や研修等がありましたら入力してください。名称/場所/時間帯も併せてご記入ください。</p>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-date first" value="2017/06/01">
+                            <select class="form-control input-date third " style="margin-left: 10px">
+                                <option>終日</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                            <span style="font-size: 18px;margin-right: 5px">~</span>
+                            <input type="text" class="form-control input-date second" value="2017/06/01">
+                            <select class="form-control input-date third " style="margin-left: 10px">
+                                <option>終日</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                            <span style="margin: 0px 15px">名称/場所/時間帯等<span style="color: red">※</span></span>
+                            <input type="text" class="form-control input-date sixth" placeholder="100文字以内">
+                            <span class="icon-remove"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            <br><span class="title-label label2">0/100</span>
+                        </div>
+                        <div class="form-group">
+                            <button style="border: 0;background-color: #fff"><i class="fa fa-plus-square fa-2x" style="margin-left: -7px;color: #A6A6A6"></i><span
+                                    style="color: #3D7FB7;margin-left: 10px;margin-bottom: 10px">追加</span></button>
+                        </div>
+                        <p>※募集内容に変更が生じた場合、再度募集がかかることがございます。<br>
+                            ※締切３日前と、締切当日の朝7:00に未提出のスタッフ宛にリマインドメールと通知が送信されます。<br>
+                            ※提出したあとも、提出期限前であれば編集・再提出できます。</p>
+                        <button type="submit" class="btn btn-custom1">提出</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
+                <!--integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
+                <!--crossorigin="anonymous"></script>-->
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"-->
+                <!--integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"-->
+                <!--crossorigin="anonymous"></script>-->
+        <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"-->
+                <!--integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"-->
+                <!--crossorigin="anonymous"></script>-->
+<script type="text/javascript" src="app.bundle.js"></script></body>
+</html>

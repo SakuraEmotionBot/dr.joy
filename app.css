@@ -78,7 +78,7 @@
 
 .search{
     padding-bottom: 20px;
-    width: 310px;
+    /*width: 310px;*/
 }
 .menu-content a{
     color: #000;
@@ -91,7 +91,7 @@
 /*border: none;*/
 /*}*/
 .menu-content{
-    width: 310px;
+    /*width: 310px;*/
     border: 1px solid #fff;
 }
 .nav-side-menu .toggle-btn {
@@ -238,7 +238,6 @@
 }
 .right-content{
     height: 50px;
-    /*width: 903px;*/
     margin: 75px 10px 10px -20px;
     font-size: 0.75rem;
     color: #777777;
@@ -513,6 +512,7 @@ select {
     border-collapse: separate;
     border-spacing: 16px 0;
     border-spacing: 1rem 0;
+    width: 110%;
     color: #979797;
     display: table;
     font-family: Merriweather;
@@ -535,6 +535,7 @@ select {
     display: table-cell;
     width: 100%;
     border-top-style: dashed;
+    margin-left: -20px;
 }
 .right-table{
     background-color: #F8F8F8;
@@ -564,3 +565,6 @@ select {
 .remove-right{
    margin-left: 170px;
 }
+/*.row{*/
+    /*margin-left: -11px ;*/
+/*}*/
