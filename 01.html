@@ -81,27 +81,27 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-3">
-            <div class="row">
-                <div class="nav-side-menu">
-                <div class="avatar">
-                    <img src="images/avt.png" alt="Avatar" title="Avatar">
-                    <div class="description">
+        <div id="side-bar" class="col-md-3">
+
+                    <div class="avatar">
+                        <img src="images/avt.png" alt="Avatar" title="Avatar">
+                        <div class="description">
                 <span class="text-name">名前 <br>
                     サブ表示</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="input-group search">
-                    <input class="form-control py-2 border-right-0 border" type="search" placeholder="検索"
-                           id="example-search-input">
-                    <span class="input-group-append">
+                    <div class="input-group search">
+                        <input class="form-control py-2 border-right-0 border" type="search" placeholder="検索"
+                               id="example-search-input">
+                        <span class="input-group-append">
                 <button class="btn btn-outline-secondary border-left-0 border" type="button">
                     <i class="fa fa-search"></i>
                 </button>
               </span>
-                </div>
-                <br>
+                    </div>
+
+                <div class="nav-side-menu">
                     <div class="menu-list">
                         <ul id="menu-content" class="menu-content">
                             <li data-toggle="collapse" data-target="#item1" class="collapsed active">
@@ -166,11 +166,10 @@
                         </ul>
                     </div>
                 </div>
-            </div>
         </div>
         <!--right-content-->
-        <div class="col-md-9">
-            <div class="row right-content">
+        <div id="right-content" class="col-md-9">
+            <div class="row">
                 <div class="col-md-12">
                     <div class="back">
                         <span class="back-icon"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
@@ -221,7 +220,8 @@
                         </div>
                         <div class="custom-control custom-checkbox custom-control-inline">
                             <input type="checkbox" class="custom-control-input" id="defaultInline5">
-                            <label class="custom-control-label color-checkbox" for="defaultInline5">その他の予定 (学会・研修等)</label>
+                            <label class="custom-control-label color-checkbox" for="defaultInline5">その他の予定
+                                (学会・研修等)</label>
                         </div>
 
                         <span>
@@ -245,6 +245,8 @@
                         <br><br>
                         <button type="submit" class="btn btn-custom">募集開始</button>
                     </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
