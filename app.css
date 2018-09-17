@@ -14,7 +14,7 @@
 
 
 .main-nav a{
-    margin-left: 10px;
+    margin-left: 0px;
     color: #fff;
 }
 .main-nav .nav-first{
@@ -199,11 +199,11 @@
     opacity: 0.5;
 }
 .nav-side-menu{
-    margin-top: 50px;
+    margin-top: 20px;
     /*overflow: auto;*/
     font-weight: 200;
-    position: fixed;
-    width: 320px;
+    /*position: fixed;*/
+    /*width: 320px;*/
     height: 100%;
 
 }
@@ -231,16 +231,25 @@
     vertical-align: middle;
     margin-right: 10px;
 }
+
 .menu-list{
     margin-top: -15px;
     max-height: 25em;
     overflow-y: auto;
 }
-.right-content{
-    height: 50px;
+#side-bar{
+    position: fixed;
+    top: 50px;
+    z-index: 1;
+    margin-right: 20px;
+}
+#right-content{
+    position: absolute;
+    right: 0px;
+    padding-left: 30px;
     margin: 75px 10px 10px -20px;
-    font-size: 0.75rem;
     color: #777777;
+    font-size: 0.75rem;
 }
 .back{
     margin-bottom: 40px;
@@ -510,15 +519,13 @@ select {
 
 .line{
     border-collapse: separate;
-    border-spacing: 16px 0;
     border-spacing: 1rem 0;
-    width: 110%;
     color: #979797;
     display: table;
     font-family: Merriweather;
-    font-size: 5em;
+    font-size: .5rem;
     line-height: .25;
-    margin: 1em 0 .5em;
+    margin: 1rem 0 1rem;
     table-layout: auto;
     /*text-align: center;*/
     /*text-shadow: .0625em .0625em 0 rgba(0, 0, 0, .2);*/
