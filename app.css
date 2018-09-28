@@ -542,7 +542,7 @@ select {
     display: table-cell;
     width: 100%;
     border-top-style: dashed;
-    margin-left: -20px;
+    margin-left: -30px;
 }
 .right-table{
     background-color: #F8F8F8;
