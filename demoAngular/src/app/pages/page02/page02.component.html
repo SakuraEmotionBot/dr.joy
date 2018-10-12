@@ -1,0 +1,244 @@
+<app-sub-nav [pageTitle]="'page02.TITLE' | translate"></app-sub-nav>
+<div class="title first">「内分泌科」からの募集</div>
+<!--<p class="p-content"><br>2017年6月1日(金) 〜 2017年7月31日(日)-->
+<!--のシフト希望を募集します。2017年5月1日(金) 19:00 までに提出してください。<br><br>-->
+<!--6月10日は監査が入りますので、担当者は出勤をお願いします。<br>-->
+<!--6月20日は創立祭のため、やむを得ない場合以外はなるべく出勤をお願いします。<br>-->
+<!--また、全国呼吸器内科学会へ登壇・参加される方は記載してください。 <span style="color: #3D7FB7; cursor: pointer" class="readMore">... もっと読む</span><br>-->
+<!--</p>-->
+<!--<div hm-read-more-->
+<!--hm-text = "{{text}}"-->
+<!--hm-limit="100"-->
+<!--hm-more-text="read more"-->
+<!--hm-less-text="read less"-->
+<!--hm-dots-class="dots"-->
+<!--hm-link-class="links">-->
+<!--</div >-->
+<app-readmore [text]="text" [maxLength]="300" [showToggleButton]="true"></app-readmore>
+
+<span class="title"><br>希望休</span>
+<p><br>希望日を入力してください。希望日がお休みにならない場合もございます。</p>
+<!--form-group01-->
+<form #form="ngForm" (ngSubmit)="submitForm()">
+  <ng-container #form01>
+    <div class="form-group" [formGroup]="page02Form.formGroup01">
+      <div class="form-group" *ngFor="let item01 of page02Form.formArray01.controls; let i01 = index"
+           [formGroup]="item01">
+        <div class="row">
+          <div class="col-2">
+            <div *ngIf="submitted && page02Form.formArray01.controls[i01].get('itemDate01').hasError('required')" class="alert alertItemDate01">
+              必須項目です
+            </div>
+          </div>
+          <div class="col-2">
+            <div *ngIf="submitted && page02Form.formArray01.controls[i01].get('select01').hasError('required') " class="alert alertSelect01">必須項目です
+            </div>
+          </div>
+          <div class="col-2">
+            <div *ngIf="submitted && page02Form.formArray01.controls[i01].get('reason').hasError('required')" class="alert alertReason">必須項目です
+            </div>
+          </div>
+        </div>
+        <!--<br>-->
+        <input formControlName="itemDate01" type="text" class="form-control input-date date-picker first"
+               placeholder="yyyy/mm/dd"
+               [ngClass]="{ 'is-invalid': submitted && item01.get('itemDate01').hasError('required') }" required>
+        <select formControlName="select01" class="form-control input-date second ">
+          <option [value]="select01" *ngFor="let select01 of select01">{{select01}}</option>
+        </select>
+        <select formControlName="select02" class="form-control input-date third ">
+          <option [value]="select02" *ngFor="let select02 of select02">{{select02}}</option>
+        </select>
+        <span>理由</span>
+        <input formControlName="reason" #reason type="text" class="form-control input-date fourth" placeholder="100文字以内"
+               maxlength=100 [ngClass]="{ 'is-invalid': submitted && item01.get('reason').hasError('required') }">
+        <span class="icon-remove"><i class="fa fa-times" aria-hidden="true" (click)="removeItem01(i01)"></i></span>
+        <br><span class="title-label">{{reason.value.length}}/100</span>
+      </div>
+
+      <div class="form-group">
+        <button style="border: 0;background-color: #fff" (click)="addItem01()" type="button"><i class="fa fa-plus-square fa-2x"
+                                                                                  style="margin-left: -7px;color: #A6A6A6"></i><span
+          style="color: #3D7FB7;margin-left: 10px;margin-bottom: 10px">追加</span></button>
+      </div>
+    </div>
+  </ng-container>
+
+  <div class="title">夜勤NG</div>
+    <p class="p-content"><br>当直に入れない日を入力してください。理由も併せてご記入ください。承認されない場合もございます。</p>
+    <!--form-group02-->
+    <div class="form-group" [formGroup]="page02Form.formGroup02">
+      <div class="form-group" *ngFor="let item02 of page02Form.formArray02.controls; let i02 = index"
+           [formGroup]="item02">
+        <!--<div class="alert alertItemDate02">必須項目です-->
+        <!--</div>-->
+        <!--<div class="alert alertSelect03">必須項目です-->
+        <!--</div>-->
+        <!--<div class="alert alertOtherReason">必須項目です-->
+        <!--</div>-->
+        <br>
+        <input formControlName="itemDate02" type="text" class="form-control input-date date-picker first"
+               placeholder="yyyy/mm/dd">
+
+        <select formControlName="select03" class="form-control input-date second ">
+          <option [value]="select03" *ngFor="let select03 of select03">{{select03}}</option>
+          <!--<option>種別を選択</option>-->
+          <!--<option>2</option>-->
+          <!--<option>3</option>-->
+          <!--<option>4</option>-->
+        </select>
+        <span style="padding-left: 20px">理由・その他の場合<span style="color: red">※</span></span>
+        <input formControlName="otherReason" #otherReason type="text" class="form-control input-date fifth"
+               placeholder="100文字以内">
+        <span class="icon-remove"><i class="fa fa-times" aria-hidden="true" (click)="removeItem02(i02)"></i></span>
+        <br><span class="title-label label1">{{otherReason.value.length}}/100</span>
+      </div>
+      <div class="form-group">
+        <button style="border: 0;background-color: #fff" (click)="addItem02()" type="button"><i class="fa fa-plus-square fa-2x"
+                                                                                  style="margin-left: -7px;color: #A6A6A6"></i><span
+          style="color: #3D7FB7;margin-left: 10px;margin-bottom: 10px">追加</span></button>
+      </div>
+    </div>
+
+    <div class="title">夜勤NG</div>
+    <p class="p-content"><br>当直希望日がありましたら入力してください。希望日が当直にならない場合もございます。</p>
+    <!--form-group-03-->
+    <div class="form-group" [formGroup]="page02Form.formGroup03">
+      <div class="form-group" *ngFor="let item03 of page02Form.formArray03.controls; let i03 = index"
+           [formGroup]="item03">
+        <!--<div class="alert alertItemDate03">aaaaaa</div>-->
+        <br>
+        <input formControlName="itemDate03" type="text" class="form-control input-date date-picker first"
+               placeholder="yyyy/mm/dd">
+        <span class="icon-remove"><i class="fa fa-times" aria-hidden="true" (click)="removeItem03(i03)"></i></span>
+      </div>
+      <div class="form-group">
+        <button style="border: 0;background-color: #fff" (click)="addItem03()" type="button"><i class="fa fa-plus-square fa-2x"
+                                                                                  style="margin-left: -7px;color: #A6A6A6"></i><span
+          style="color: #3D7FB7;margin-left: 10px;margin-bottom: 10px">追加</span></button>
+      </div>
+    </div>
+    <div class="title">外勤予定</div>
+    <p class="p-content"><br>すでに決まっている外勤予定がありましたら入力してください。その他を選択した場合は、備考欄に外勤先をご記入ください。</p>
+    <!--form-group-04-->
+    <div class="form-group" [formGroup]="page02Form.formGroup04">
+      <div *ngFor="let item04 of page02Form.formArray04.controls; let i04 = index" [formGroup]="item04">
+        <!--alert-->
+        <!--<div class="alert alertItemDate04">aaaaaa</div>-->
+        <!--<div class="alert alertItemCheck">aaaaaa</div>-->
+        <!--<div class="alert alertSelect04">aaaaaa</div>-->
+        <!--<div class="alert alertReason04">aaaaaa</div>-->
+        <br>
+        <input formControlName="itemDate04" type="text" class="form-control input-date date-picker first"
+               style="margin-right: 20px"
+               placeholder="yyyy/mm/dd">
+        <label class="customcheck">午前
+          <input formControlName="itemCheck01" type="checkbox" (change)="check(i04)"
+          >
+          <span class="checkmark"></span>
+        </label>
+        <!--<label [ngClass]="{ 'blur': check1 }" class="customcheck ">午後-->
+        <!--<input type="checkbox" [attr.disabled]="check1 ? 'disabled' : null" class="input1">-->
+        <!--<span class="checkmark"></span>-->
+        <!--</label> -->
+        <label [ngClass]="{ 'blur': page02Form.formArray04.controls[i04].get('itemCheck01').value,'customcheck' : true}" >午後
+          <input type="checkbox" formControlName="itemCheck02" [checked]="page02Form.formArray04.controls[i04].get('itemCheck01').value" >
+          <span class="checkmark"></span>
+        </label>
+        <label [ngClass]="{ 'blur': page02Form.formArray04.controls[i04].get('itemCheck01').value,'customcheck' : true }" >夜間
+          <input type="checkbox" formControlName="itemCheck03" [checked]="page02Form.formArray04.controls[i04].get('itemCheck01').value">
+          <span class="checkmark"></span>
+        </label>
+        <label [ngClass]="{ 'blur': page02Form.formArray04.controls[i04].get('itemCheck01').value,'customcheck' : true }" >夜間
+          <input type="checkbox" formControlName="itemCheck04" [checked]="page02Form.formArray04.controls[i04].get('itemCheck01').value" >
+          <span class="checkmark"></span>
+        </label>
+
+        <!--<input formControlName="itemCheck2" type="checkbox" class="custom-control-input" id="defaultInline2">-->
+        <!--<label class="custom-control-label color-checkbox blur" for="defaultInline2">午前</label>-->
+
+
+        <!--&lt;!&ndash; Default inline 3&ndash;&gt;-->
+        <!--<div class="custom-control custom-checkbox custom-control-inline ">-->
+        <!--<input type="checkbox" class="custom-control-input" id="defaultInline3" checked disabled>-->
+        <!--<label class="custom-control-label color-checkbox blur" for="defaultInline3">午後</label>-->
+        <!--</div>-->
+        <!--<div class="custom-control custom-checkbox custom-control-inline ">-->
+        <!--<input type="checkbox" class="custom-control-input " id="defaultInline4" checked disabled>-->
+        <!--<label class="custom-control-label color-checkbox blur" for="defaultInline4">夜間</label>-->
+        <!--</div>-->
+        <select formControlName="select04" class="form-control input-date second ">
+          <option [value]="select04" *ngFor="let select04 of select04">{{select04}}</option>
+          <!--<option>外勤先を選択</option>-->
+          <!--<option>2</option>-->
+          <!--<option>3</option>-->
+          <!--<option>4</option>-->
+        </select>
+        <span style="margin-left: 10px">理由</span>
+        <input formControlName="reason04" #reason04 type="text" class="form-control input-date sixth"
+               placeholder="100文字以内" maxlength=100>
+        <span class="icon-remove"><i class="fa fa-times" aria-hidden="true" (click)="removeItem04(i04)"></i></span>
+        <br><span class="title-label label2">{{reason04.value.length}}/100</span>
+      </div>
+      <div class="form-group">
+        <br>
+        <button style="border: 0;background-color: #fff" (click)="addItem04()" type="button"><i class="fa fa-plus-square fa-2x"
+                                                                                  style="margin-left: -7px;color: #A6A6A6"></i><span
+          style="color: #3D7FB7;margin-left: 10px;margin-bottom: 10px">追加</span></button>
+      </div>
+    </div>
+
+    <div class="title">その他の予定 (学会、研修等)</div>
+    <p class="p-content"><br>すでに決まっている学会や研修等がありましたら入力してください。名称/場所/時間帯も併せてご記入ください。</p>
+
+    <!--form-group-05-->
+    <div class="form-group" [formGroup]="page02Form.formGroup05">
+      <div *ngFor="let item05 of page02Form.formArray05.controls; let i05 = index" [formGroup]="item05">
+        <!--alert-->
+        <!--<div class="alert alertItemStartDate">aaaaaa</div>-->
+        <!--<div class="alert alertItemSelect05">aaaaaa</div>-->
+        <!--<div class="alert alertItemEndDate">aaaaaa</div>-->
+        <!--<div class="alert alertItemSelect06">aaaaaa</div>-->
+        <!--<div class="alert alertItemOtherReason05">aaaaaa</div>-->
+        <br>
+        <input formControlName="startDate" type="text" class="form-control input-date date-picker first"
+               placeholder="yyyy/mm/dd">
+        <select formControlName="select05" class="form-control input-date third " style="margin-left: 10px">
+          <option [value]="select05" *ngFor="let select05 of select05">{{select05}}</option>
+          <!--<option>終日</option>-->
+          <!--<option>2</option>-->
+          <!--<option>3</option>-->
+          <!--<option>4</option>-->
+        </select>
+        <span style="font-size: 18px;margin-right: 5px">~</span>
+        <input formControlName="endDate" type="text" class="form-control input-date date-picker second"
+               placeholder="yyyy/mm/dd">
+        <select formControlName="select06" class="form-control input-date third " style="margin-left: 10px">
+          <option [value]="select06" *ngFor="let select06 of select06">{{select06}}</option>
+          <!--<option>終日</option>-->
+          <!--<option>2</option>-->
+          <!--<option>3</option>-->
+          <!--<option>4</option>-->
+        </select>
+        <span style="margin: 0px 15px">名称/場所/時間帯等<span style="color: red">※</span></span>
+        <input formControlName="otherReason05" #otherReason05 type="text" class="form-control input-date sixth"
+               placeholder="100文字以内" maxlength=100>
+        <span class="icon-remove"><i class="fa fa-times" aria-hidden="true" (click)="removeItem05(i05)"></i></span>
+        <br><span class="title-label label2">{{otherReason05.value.length}}/100</span>
+
+      </div>
+      <div class="form-group">
+        <button style="border: 0;background-color: #fff" (click)="addItem05()" type="button"><i class="fa fa-plus-square fa-2x"
+                                                                                  style="margin-left: -7px;color: #A6A6A6"></i><span
+          style="color: #3D7FB7;margin-left: 10px;margin-bottom: 10px">追加</span></button>
+      </div>
+    </div>
+
+    <p>※募集内容に変更が生じた場合、再度募集がかかることがございます。<br>
+      ※締切３日前と、締切当日の朝7:00に未提出のスタッフ宛にリマインドメールと通知が送信されます。<br>
+      ※提出したあとも、提出期限前であれば編集・再提出できます。</p>
+    <!--<button type="submit" class="btn btn-custom1" (click)="submitForm()" >提出</button>-->
+    <button type="submit" class="btn btn-custom1">提出
+    </button>
+</form>
+

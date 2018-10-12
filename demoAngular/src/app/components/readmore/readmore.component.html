@@ -1,0 +1,6 @@
+<div >
+<div [innerHTML]="currentText" style="display: inline"></div>
+  <span *ngIf="showToggleButton">
+            <a (click)="toggleView()" style="color: #3D7FB7;font-weight: bold">{{isCollapsed? '...もっと読む':'閉じる'}}</a>
+        </span>
+</div>

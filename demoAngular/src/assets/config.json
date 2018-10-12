@@ -1,0 +1,4 @@
+{
+  "dataUrl": "https://api.datamuse.com/words?ml=hello",
+  "textfile": "assets/textfile.txt"
+}

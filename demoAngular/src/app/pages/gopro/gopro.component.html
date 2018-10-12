@@ -1,0 +1,38 @@
+<div class="col-md-8">
+  <form novalidate #formTable="ngForm" (ngSubmit)="SubmitForm()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" ngModel name="name" id="name" placeholder="Name" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="text" ngModel name="age" id="age" placeholder="Age" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <div class="custom-control custom-radio">
+      <label>Gender</label>
+        <input type="radio" class="custom-control-input inline" name="male" id="male">Male
+      <label class="custom-control-label" for="male"></label>
+        <input type="radio" class="custom-control-input inline" name="male" id="female">Male
+      <label class="custom-control-label" for="male"></label>
+        <input type="radio" class="custom-control-input inline" name="male" id="undefined">Male
+      <label class="custom-control-label" for="male"></label>
+      </div>
+    </div>
+  </form>
+  <table class="table table-bordered table-danger table-hover">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

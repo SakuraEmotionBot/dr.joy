@@ -1,0 +1,109 @@
+<app-sub-nav [pageTitle]="'page05.TITLE' | translate"></app-sub-nav>
+<p class="p-content">
+  チーム、メンバーを登録します。「チーム追加」ボタンから追加してください。ドラッグで表示順の変更ができます。
+</p>
+<form novalidate [formGroup]="page05Form.formGroup">
+  <div *ngFor="let items of page05Form.formArray.controls; let i= index" [formGroup]="items">
+<div class="row">
+  <div class="col-md-5">
+    <div class="row">
+
+      <span class="icon-arrow"><i class="fa fa-arrows-v" aria-hidden="true"></i></span>
+      <button class="square square8" style="border: 0;display: inline-block" [popover]="myPopover"></button>
+      <popover-content #myPopover
+                       placement="bottom"
+                       [animation]="true"
+                       [closeOnClickOutside]="true">
+        <div class="col-grid clearfix" >
+          <div class="col-grid-item square square6" ></div>
+          <div class="col-grid-item square square5"></div>
+          <div class="col-grid-item square square4"></div>
+          <div class="col-grid-item square square3"></div>
+          <div class="col-grid-item square square2"></div>
+        </div>
+        <div class="col-grid clearfix">
+          <div class="col-grid-item square square6" ></div>
+          <div class="col-grid-item square square5"></div>
+          <div class="col-grid-item square square4"></div>
+          <div class="col-grid-item square square3"></div>
+          <div class="col-grid-item square square2"></div>
+        </div>
+      </popover-content>
+
+      <div class="form-group">
+        <span class="label-input">略称<span style="color: red">※</span></span>
+        <input type="text" class="form-control input-date nineth" placeholder="2文字以内" >
+      </div>
+      <br><br>
+      <div class="form-group">
+                                    <span class="label-input" style="margin-left: 102px">名称<span
+                                      style="color: red;margin-right: 3px">※</span></span>
+        <input type="text" class="form-control input-date eighth" placeholder="20文字以内" >
+
+        <br>
+        <button type="submit" class="btn btn-danger btn-custom2" (click)="removeItem(i)">チーム削除</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5 right-table" >
+    <div class="member">
+      <span class="title">メンバー</span>
+      <button style="border: 0;background-color: #F8F8F8" (click)="addItem01(i)"><i class="fa fa-plus-square fa-2x"
+                                                             style="margin-left: 10px;color: #A6A6A6"></i><span
+        style="color: #3D7FB7;margin-left: 10px;margin-bottom: 10px">追加</span></button>
+    </div>
+    <div class="form-group" *ngFor="let item01 of items.get('rightItems')['controls']; let i01= index" [formGroup]="item01">
+      <div class="row information" >
+        <div class="icon-arrow" formControlname="rightItems01"><i class="fa fa-arrows-v" aria-hidden="true"></i></div>
+        <div class="avatar-person">
+          <img src="assets/images/Capture.PNG" alt="avatar">
+          <div class="label-input">田中 行雄 <br>
+            <i class="fa fa-chevron-right" aria-hidden="true"></i> 整形外科
+          </div>
+        </div>
+        <span class="icon-remove remove-right"><i class="fa fa-times"
+                                                  aria-hidden="true" (click)="removeItem01(i,i01)"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="line"></div>
+  </div>
+<!--content2-->
+<!--<div class="row">-->
+  <!--<div class="col-md-5">-->
+    <!--<div class="row">-->
+
+      <!--<span class="icon-arrow"><i class="fa fa-arrows-v" aria-hidden="true"></i></span>-->
+      <!--<div class="square square9" style="display: inline-block"></div>-->
+      <!--<div class="form-group">-->
+        <!--<span class="label-input">略称<span style="color: red">※</span></span>-->
+        <!--<input type="text" class="form-control input-date nineth" placeholder="2文字以内">-->
+      <!--</div>-->
+      <!--<br><br>-->
+      <!--<div class="form-group">-->
+                                    <!--<span class="label-input" style="margin-left: 102px">名称<span-->
+                                      <!--style="color: red;margin-right: 3px">※</span></span>-->
+        <!--<input type="text" class="form-control input-date eighth" placeholder="20文字以内">-->
+
+        <!--<br>-->
+        <!--<button type="submit" class="btn btn-danger btn-custom2">チーム削除</button>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div class="col-md-5 right-table content2">-->
+    <!--<div class="member"></div>-->
+    <!--<span class="title">メンバー</span>-->
+    <!--<button style="border: 0;background-color: #F8F8F8"><i class="fa fa-plus-square fa-2x"-->
+                                                           <!--style="margin-left: 10px;color: #A6A6A6"></i><span-->
+      <!--style="color: #3D7FB7;margin-left: 10px;margin-bottom: 10px">追加</span></button>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div class="line"></div>-->
+<div class="form-group">
+  <button type="submit" class="btn btn-custom3" (click)="addItems()">チーム追加</button>
+  <br>
+  <button type="submit" class="btn btn-custom1" (click)="submitForm()">保存</button>
+</div>
+</form>

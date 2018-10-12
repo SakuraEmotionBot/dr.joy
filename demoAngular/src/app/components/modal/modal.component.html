@@ -1,0 +1,45 @@
+<div *ngIf="Myservice.isShowModal"
+     class="modal" id="myModal" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <!--<h4 class="modal-title">Modal Heading</h4>-->
+        <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+      </div>
+      <div class="modal-icon modal-warning" *ngIf="Myservice.cancelText">{{Myservice.iconName}}</div>
+      <div class="modal-icon modal-Alert" *ngIf="!Myservice.cancelText && Myservice.iconName">{{Myservice.iconName}}</div>
+
+      <div class="check_mark" *ngIf="!Myservice.cancelText && !Myservice.iconName">
+        <div class="sa-icon sa-success animate">
+          <span class="sa-line sa-tip animateSuccessTip"></span>
+          <span class="sa-line sa-long animateSuccessLong"></span>
+          <div class="sa-placeholder"></div>
+          <div class="sa-fix"></div>
+        </div>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <span>{{Myservice.message}}</span>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <div [ngClass]="Myservice.cancelText? 'col-8': 'col-7 '">
+          <div class="row">
+            <button type="button" class="btn btn-warning" *ngIf="Myservice.okText"
+                    (click)="submitModal(Myservice.cancelText?'ok':'hide')">
+              {{Myservice.okText}}
+            </button>
+            <button type="button" class="btn active btn-secondary" *ngIf="Myservice.cancelText"
+                    (click)="submitModal('hide')" id="btn-close">
+              {{Myservice.cancelText}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
